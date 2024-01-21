@@ -16,7 +16,7 @@
       <AutoMoveInWalkMode>True</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BinaryFilesInSourceControl>False</BinaryFilesInSourceControl>
-      <BuildTargets xml:space="preserve">Windows, Linux</BuildTargets>
+      <BuildTargets>Windows</BuildTargets>
       <ClipGUIControls>False</ClipGUIControls>
       <ColorDepth>HighColor</ColorDepth>
       <CompressSpritesType>None</CompressSpritesType>
@@ -737,6 +737,18 @@
           <UnloadedRoom>
             <Description>Garage</Description>
             <Number>21</Number>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Description>Klassenzimmer</Description>
+            <Number>22</Number>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Description>Zeitung</Description>
+            <Number>23</Number>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Description>Haus_Startscreen</Description>
+            <Number>24</Number>
           </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
@@ -2053,7 +2065,7 @@
             <ID>2</ID>
             <Image>156</Image>
             <Name>iLukenoeffner</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
             <Interactions>
               <Event Index="0">iLukenoeffner_Look</Event>
@@ -2146,11 +2158,11 @@
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iPortemonaie_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
+              <Event Index="3">iPortemonaie_UseInv</Event>
+              <Event Index="4">iPortemonaie_OtherClick</Event>
             </Interactions>
           </InventoryItem>
           <InventoryItem>
@@ -2164,11 +2176,11 @@
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iTagebuch_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
+              <Event Index="3">iTagebuch_UseInv</Event>
+              <Event Index="4">iTagebuch_OtherClick</Event>
             </Interactions>
           </InventoryItem>
           <InventoryItem>
@@ -2177,16 +2189,16 @@
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
             <ID>9</ID>
-            <Image>0</Image>
+            <Image>195</Image>
             <Name>iKerze</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iKerze_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
+              <Event Index="3">iKerze_UseInv</Event>
+              <Event Index="4">iKerze_OtherClick</Event>
             </Interactions>
           </InventoryItem>
           <InventoryItem>
@@ -2200,11 +2212,11 @@
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iStaubsauger_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
+              <Event Index="3">iStaubsauger_UseInv</Event>
+              <Event Index="4">iStaubsauger_OtherClick</Event>
             </Interactions>
           </InventoryItem>
           <InventoryItem>
@@ -2218,11 +2230,11 @@
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iBriefmarke_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
+              <Event Index="3">iBriefmarke_UseInv</Event>
+              <Event Index="4">iBriefmarke_OtherClick</Event>
             </Interactions>
           </InventoryItem>
           <InventoryItem>
@@ -2236,11 +2248,11 @@
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iKugelschreiber_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
+              <Event Index="3">iKugelschreiber_UseInv</Event>
+              <Event Index="4">iKugelschreiber_OtherClick</Event>
             </Interactions>
           </InventoryItem>
           <InventoryItem>
@@ -2254,11 +2266,11 @@
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iBrief_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
+              <Event Index="3">iBrief_UseInv</Event>
+              <Event Index="4">iBrief_OtherClick</Event>
             </Interactions>
           </InventoryItem>
           <InventoryItem>
@@ -2272,11 +2284,11 @@
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iEinladung_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
+              <Event Index="3">iEinladung_UseInv</Event>
+              <Event Index="4">iEinladung_OtherClick</Event>
             </Interactions>
           </InventoryItem>
           <InventoryItem>
@@ -2290,11 +2302,11 @@
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
             <Interactions>
-              <Event Index="0" />
+              <Event Index="0">iHonig_Look</Event>
               <Event Index="1" />
               <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
+              <Event Index="3">iHonig_UseInv</Event>
+              <Event Index="4">iHonig_OtherClick</Event>
             </Interactions>
           </InventoryItem>
         </InventoryItems>
@@ -3350,6 +3362,90 @@
               <Event Index="7" />
             </Interactions>
           </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>21</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>0</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>15</NormalView>
+            <Properties />
+            <RealName xml:space="preserve">Mr. Koslowski</RealName>
+            <ScriptName>cKoslowski</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>14</SpeechColor>
+            <SpeechView>16</SpeechView>
+            <StartX>160</StartX>
+            <StartY>145</StartY>
+            <StartingRoom>-1</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>2</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>False</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>22</ID>
+            <IdleAnimationDelay>7</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>0</IdleView>
+            <MovementLinkedToAnimation>False</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>3</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>39</NormalView>
+            <Properties />
+            <RealName>Hoagie</RealName>
+            <ScriptName>cHoagie</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>56519</SpeechColor>
+            <SpeechView>40</SpeechView>
+            <StartX>-50</StartX>
+            <StartY>134</StartY>
+            <StartingRoom>-1</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
         </Characters>
       </CharacterFolder>
     </Characters>
@@ -3357,7 +3453,46 @@
     <Dialogs>
       <DialogFolder Name="Main">
         <SubFolders />
-        <Dialogs />
+        <Dialogs>
+          <Dialog>
+            <ID>0</ID>
+            <Name>dEpisode1</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// empty dialog script
+@1  // option 1
+BRITNEY: Du spürst gleich meine Faust!
+return
+@2  // option 2
+BRITNEY: RAUS AUS MEINEM ZIMMER!
+return
+@3  // option 3
+BRITNEY: Hmm... Lass mich mal überlegen...
+BRITNEY: Ach ja. He he...
+BRITNEY: Da war doch dieser Brief...
+  CallRoomScript(1);
+stop]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Ich spüre eine gewisse Aggressivität.</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Kannst du unter dem vielen Make-up eigentlich atmen?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">War die Post schon da?</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+        </Dialogs>
       </DialogFolder>
     </Dialogs>
     <Cursors>
@@ -3970,9 +4105,49 @@
           <Type>int</Type>
         </GlobalVariable>
         <GlobalVariable>
-          <DefaultValue />
+          <DefaultValue>1</DefaultValue>
           <Name>EPISODE</Name>
           <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue>false</DefaultValue>
+          <Name>g_sequence</Name>
+          <Type>bool</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue />
+          <Name>aChannel</Name>
+          <Type>AudioChannel*</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue>90</DefaultValue>
+          <Name>g_volume</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue>0</DefaultValue>
+          <Name>g1_kerzeStatus</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue>false</DefaultValue>
+          <Name>g1_staubsauger_voll</Name>
+          <Type>bool</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue>false</DefaultValue>
+          <Name>g1_ferngesehen</Name>
+          <Type>bool</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue>0</DefaultValue>
+          <Name>g1_britney_status</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <DefaultValue>false</DefaultValue>
+          <Name>g1_tagebuch_im_brief</Name>
+          <Type>bool</Type>
         </GlobalVariable>
       </Variables>
     </GlobalVariables>
@@ -10008,6 +10183,991 @@
                   </Sprite>
                 </Sprites>
               </SpriteFolder>
+              <SpriteFolder Name="Koslowski">
+                <SubFolders />
+                <Sprites>
+                  <Sprite Slot="223" Width="22" Height="77" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="224" Width="22" Height="77" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                </Sprites>
+              </SpriteFolder>
+              <SpriteFolder Name="Hoagie">
+                <SubFolders />
+                <Sprites>
+                  <Sprite Slot="225" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="226" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="227" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="228" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="229" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="230" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="231" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="232" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="237" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="238" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="239" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="240" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="241" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="242" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="243" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="244" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="245" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="248" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="249" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="250" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="311" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="381" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="382" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="383" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="384" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="385" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="386" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="387" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="388" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="389" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="390" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="391" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="392" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="393" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="394" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="395" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="396" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="397" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="398" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="399" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="400" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="405" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="406" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="407" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="408" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="409" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="410" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="411" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="412" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="413" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="414" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="415" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="416" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="417" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="418" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="419" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="420" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="421" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="422" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="423" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="424" Width="78" Height="69" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>0</ImportHeight>
+                      <ImportWidth>0</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="425" Width="30" Height="22" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>22</ImportHeight>
+                      <ImportWidth>30</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>TopLeft</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="427" Width="30" Height="22" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>22</ImportHeight>
+                      <ImportWidth>30</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>TopLeft</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                </Sprites>
+              </SpriteFolder>
             </SubFolders>
             <Sprites />
           </SpriteFolder>
@@ -12602,6 +13762,21 @@
                       <ImportAlphaChannel>False</ImportAlphaChannel>
                     </Source>
                   </Sprite>
+                  <Sprite Slot="218" Width="9" Height="2" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>2</ImportHeight>
+                      <ImportWidth>9</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
                 </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="Flur OG">
@@ -12780,6 +13955,21 @@
                       <RemapToRoomPalette>False</RemapToRoomPalette>
                       <ImportMethod>LeaveAsIs</ImportMethod>
                       <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="220" Width="35" Height="45" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>45</ImportHeight>
+                      <ImportWidth>35</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>TopLeft</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
                 </Sprites>
@@ -13041,6 +14231,36 @@
                       <RemapToRoomPalette>False</RemapToRoomPalette>
                       <ImportMethod>LeaveAsIs</ImportMethod>
                       <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="221" Width="12" Height="3" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>3</ImportHeight>
+                      <ImportWidth>12</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>TopRight</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="222" Width="7" Height="15" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>15</ImportHeight>
+                      <ImportWidth>7</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>TopLeft</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
                 </Sprites>
@@ -13371,6 +14591,21 @@
                       <RemapToRoomPalette>False</RemapToRoomPalette>
                       <ImportMethod>LeaveAsIs</ImportMethod>
                       <ImportAlphaChannel>False</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="219" Width="10" Height="4" ColorDepth="16" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName />
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>4</ImportHeight>
+                      <ImportWidth>10</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>TopLeft</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
                 </Sprites>
@@ -19300,16 +20535,663 @@
               </View>
             </Views>
           </ViewFolder>
+          <ViewFolder Name="Koslowski">
+            <SubFolders />
+            <Views>
+              <View>
+                <ID>15</ID>
+                <Name>KoslowskiWalk</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>223</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>0</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>2</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>0</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>3</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames />
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>16</ID>
+                <Name>KoslowskiTalk</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>224</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+            </Views>
+          </ViewFolder>
+          <ViewFolder Name="Hoagie">
+            <SubFolders />
+            <Views>
+              <View>
+                <ID>39</ID>
+                <Name>HoagieWalk</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>225</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>226</Image>
+                        <Sound>87</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>227</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>3</ID>
+                        <Image>228</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>4</ID>
+                        <Image>229</Image>
+                        <Sound>87</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>5</ID>
+                        <Image>230</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>6</ID>
+                        <Image>231</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>7</ID>
+                        <Image>232</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>8</ID>
+                        <Image>237</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>True</Flipped>
+                        <ID>0</ID>
+                        <Image>238</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>True</Flipped>
+                        <ID>1</ID>
+                        <Image>239</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>True</Flipped>
+                        <ID>2</ID>
+                        <Image>240</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>True</Flipped>
+                        <ID>3</ID>
+                        <Image>241</Image>
+                        <Sound>87</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>True</Flipped>
+                        <ID>4</ID>
+                        <Image>242</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>True</Flipped>
+                        <ID>5</ID>
+                        <Image>243</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>True</Flipped>
+                        <ID>6</ID>
+                        <Image>244</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>True</Flipped>
+                        <ID>7</ID>
+                        <Image>245</Image>
+                        <Sound>87</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>True</Flipped>
+                        <ID>8</ID>
+                        <Image>248</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>2</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>249</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>250</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>311</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>3</ID>
+                        <Image>381</Image>
+                        <Sound>87</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>4</ID>
+                        <Image>382</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>5</ID>
+                        <Image>383</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>6</ID>
+                        <Image>384</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>7</ID>
+                        <Image>385</Image>
+                        <Sound>87</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>8</ID>
+                        <Image>386</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>3</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>387</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>388</Image>
+                        <Sound>87</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>389</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>3</ID>
+                        <Image>390</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>4</ID>
+                        <Image>391</Image>
+                        <Sound>87</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>5</ID>
+                        <Image>392</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>6</ID>
+                        <Image>393</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>7</ID>
+                        <Image>394</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>8</ID>
+                        <Image>395</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>40</ID>
+                <Name>HoagieTalk</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>396</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>397</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>398</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>3</ID>
+                        <Image>399</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>4</ID>
+                        <Image>400</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>5</ID>
+                        <Image>405</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>6</ID>
+                        <Image>406</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>True</Flipped>
+                        <ID>0</ID>
+                        <Image>407</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>True</Flipped>
+                        <ID>1</ID>
+                        <Image>408</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>True</Flipped>
+                        <ID>2</ID>
+                        <Image>409</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>True</Flipped>
+                        <ID>3</ID>
+                        <Image>410</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>True</Flipped>
+                        <ID>4</ID>
+                        <Image>411</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>True</Flipped>
+                        <ID>5</ID>
+                        <Image>412</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>True</Flipped>
+                        <ID>6</ID>
+                        <Image>413</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>2</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>414</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>415</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>416</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>3</ID>
+                        <Image>417</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>4</ID>
+                        <Image>418</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>5</ID>
+                        <Image>419</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>6</ID>
+                        <Image>420</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>3</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>421</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>422</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>2</ID>
+                        <Image>423</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>3</ID>
+                        <Image>424</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+              <View>
+                <ID>41</ID>
+                <Name>HoagieHead</Name>
+                <Loops>
+                  <Loop>
+                    <ID>0</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>425</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>427</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>1</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>425</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>427</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>2</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>425</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>427</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                  <Loop>
+                    <ID>3</ID>
+                    <RunNextLoop>False</RunNextLoop>
+                    <Frames>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>0</ID>
+                        <Image>425</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                      <ViewFrame>
+                        <Delay>0</Delay>
+                        <Flipped>False</Flipped>
+                        <ID>1</ID>
+                        <Image>427</Image>
+                        <Sound>0</Sound>
+                      </ViewFrame>
+                    </Frames>
+                  </Loop>
+                </Loops>
+              </View>
+            </Views>
+          </ViewFolder>
         </SubFolders>
         <Views />
       </ViewFolder>
     </Views>
     <DeletedViews>
-      <ViewID>15</ViewID>
-      <ViewID>16</ViewID>
-      <ViewID>39</ViewID>
-      <ViewID>40</ViewID>
-      <ViewID>41</ViewID>
       <ViewID>42</ViewID>
       <ViewID>43</ViewID>
       <ViewID>44</ViewID>
@@ -19499,7 +21381,7 @@
                 <ScriptName>aMusic1</ScriptName>
                 <SourceFileName>music\music1.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19512,7 +21394,7 @@
                 <ScriptName>aMusic10</ScriptName>
                 <SourceFileName>music\music10.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19525,7 +21407,7 @@
                 <ScriptName>aMusic11</ScriptName>
                 <SourceFileName>music\music11.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19538,7 +21420,7 @@
                 <ScriptName>aMusic13</ScriptName>
                 <SourceFileName>music\music13.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19551,7 +21433,7 @@
                 <ScriptName>aMusic14</ScriptName>
                 <SourceFileName>music\music14.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19564,7 +21446,7 @@
                 <ScriptName>aMusic15</ScriptName>
                 <SourceFileName>music\music15.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19577,7 +21459,7 @@
                 <ScriptName>aMusic16</ScriptName>
                 <SourceFileName>music\music16.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19590,7 +21472,7 @@
                 <ScriptName>aMusic17</ScriptName>
                 <SourceFileName>music\music17.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19603,7 +21485,7 @@
                 <ScriptName>aMusic18</ScriptName>
                 <SourceFileName>music\music18.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19616,7 +21498,7 @@
                 <ScriptName>aMusic19</ScriptName>
                 <SourceFileName>music\music19.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19629,7 +21511,7 @@
                 <ScriptName>aMusic2</ScriptName>
                 <SourceFileName>music\music2.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19642,7 +21524,7 @@
                 <ScriptName>aMusic20</ScriptName>
                 <SourceFileName>music\music20.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19655,7 +21537,7 @@
                 <ScriptName>aMusic21</ScriptName>
                 <SourceFileName>music\music21.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19668,7 +21550,7 @@
                 <ScriptName>aMusic22</ScriptName>
                 <SourceFileName>music\music22.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19681,7 +21563,7 @@
                 <ScriptName>aMusic23</ScriptName>
                 <SourceFileName>music\music23.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19694,7 +21576,7 @@
                 <ScriptName>aMusic24</ScriptName>
                 <SourceFileName>music\music24.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19707,7 +21589,7 @@
                 <ScriptName>aMusic25</ScriptName>
                 <SourceFileName>music\music25.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19720,7 +21602,7 @@
                 <ScriptName>aMusic26</ScriptName>
                 <SourceFileName>music\music26.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19733,7 +21615,7 @@
                 <ScriptName>aMusic27</ScriptName>
                 <SourceFileName>music\music27.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19746,7 +21628,7 @@
                 <ScriptName>aMusic28</ScriptName>
                 <SourceFileName>music\music28.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19759,7 +21641,7 @@
                 <ScriptName>aMusic29</ScriptName>
                 <SourceFileName>music\music29.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19772,7 +21654,7 @@
                 <ScriptName>aMusic3</ScriptName>
                 <SourceFileName>music\music3.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19785,7 +21667,7 @@
                 <ScriptName>aMusic30</ScriptName>
                 <SourceFileName>music\music30.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19798,7 +21680,7 @@
                 <ScriptName>aMusic31</ScriptName>
                 <SourceFileName>music\music31.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19811,7 +21693,7 @@
                 <ScriptName>aMusic32</ScriptName>
                 <SourceFileName>music\music32.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19824,7 +21706,7 @@
                 <ScriptName>aMusic33</ScriptName>
                 <SourceFileName>music\music33.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19837,7 +21719,7 @@
                 <ScriptName>aMusic34</ScriptName>
                 <SourceFileName>music\music34.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19850,7 +21732,7 @@
                 <ScriptName>aMusic35</ScriptName>
                 <SourceFileName>music\music35.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19863,7 +21745,7 @@
                 <ScriptName>aMusic36</ScriptName>
                 <SourceFileName>music\music36.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19876,7 +21758,7 @@
                 <ScriptName>aMusic37</ScriptName>
                 <SourceFileName>music\music37.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19889,7 +21771,7 @@
                 <ScriptName>aMusic38</ScriptName>
                 <SourceFileName>music\music38.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19902,7 +21784,7 @@
                 <ScriptName>aMusic39</ScriptName>
                 <SourceFileName>music\music39.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19915,7 +21797,7 @@
                 <ScriptName>aMusic4</ScriptName>
                 <SourceFileName>music\music4.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19928,7 +21810,7 @@
                 <ScriptName>aMusic40</ScriptName>
                 <SourceFileName>music\music40.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19941,7 +21823,7 @@
                 <ScriptName>aMusic41</ScriptName>
                 <SourceFileName>music\music41.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19954,7 +21836,7 @@
                 <ScriptName>aMusic42</ScriptName>
                 <SourceFileName>music\music42.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19967,7 +21849,7 @@
                 <ScriptName>aMusic43</ScriptName>
                 <SourceFileName>music\music43.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19980,7 +21862,7 @@
                 <ScriptName>aMusic44</ScriptName>
                 <SourceFileName>music\music44.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -19993,7 +21875,7 @@
                 <ScriptName>aMusic45</ScriptName>
                 <SourceFileName>music\music45.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -20006,7 +21888,7 @@
                 <ScriptName>aMusic46</ScriptName>
                 <SourceFileName>music\music46.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -20019,7 +21901,7 @@
                 <ScriptName>aMusic47</ScriptName>
                 <SourceFileName>music\music47.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -20032,7 +21914,7 @@
                 <ScriptName>aMusic48</ScriptName>
                 <SourceFileName>music\music48.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -20045,7 +21927,7 @@
                 <ScriptName>aMusic49</ScriptName>
                 <SourceFileName>music\music49.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -20058,7 +21940,7 @@
                 <ScriptName>aMusic5</ScriptName>
                 <SourceFileName>music\music5.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -20071,7 +21953,7 @@
                 <ScriptName>aMusic50</ScriptName>
                 <SourceFileName>music\music50.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -20084,7 +21966,7 @@
                 <ScriptName>aMusic51</ScriptName>
                 <SourceFileName>music\music51.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -20097,7 +21979,7 @@
                 <ScriptName>aMusic52</ScriptName>
                 <SourceFileName>music\music52.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -20110,7 +21992,7 @@
                 <ScriptName>aMusic53</ScriptName>
                 <SourceFileName>music\music53.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -20123,7 +22005,7 @@
                 <ScriptName>aMusic6</ScriptName>
                 <SourceFileName>music\music6.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -20136,7 +22018,7 @@
                 <ScriptName>aMusic7</ScriptName>
                 <SourceFileName>music\music7.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -20149,7 +22031,7 @@
                 <ScriptName>aMusic8</ScriptName>
                 <SourceFileName>music\music8.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InSeparateVOX</BundlingType>
@@ -20162,7 +22044,7 @@
                 <ScriptName>aMusic9</ScriptName>
                 <SourceFileName>music\music9.mid</SourceFileName>
                 <Type>2</Type>
-                <FileLastModifiedDate>2014-12-02 02:21:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2024-01-22 07:56:42Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
@@ -21167,7 +23049,9 @@
   <Component Name="Rooms" />
   <Component Name="Translations" />
   <Component Name="MusicAndSpeech">
-    <SpeechVoxFiles />
+    <SpeechVoxFiles>
+      <Folder Name="speech" />
+    </SpeechVoxFiles>
     <PamFiles>
       <Folder Name="speech" />
     </PamFiles>

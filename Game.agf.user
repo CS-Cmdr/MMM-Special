@@ -4,7 +4,7 @@
   <Component Name="SourceControl" />
   <WorkspaceState>
     <LastBuildConfiguration>Debug</LastBuildConfiguration>
-    <LastBuildGameFileName>DataFile=Bernard-SP,Windows=Bernard-SP,_Debug=MMM,Linux=Bernard-SP,</LastBuildGameFileName>
+    <LastBuildGameFileName>DataFile=MMM,Windows=MMM,_Debug=MMM,Linux=Bernard-SP,</LastBuildGameFileName>
     <RequiresRebuild>False</RequiresRebuild>
   </WorkspaceState>
 </AGSEditorUserData>

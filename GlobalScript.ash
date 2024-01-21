@@ -2,6 +2,9 @@
 // the game (local and global). Do not place functions here; rather,
 // place import definitions and #define names here to be used by all
 // scripts.
+import function SetGuiVisible(bool visible);
+import function Cutscene();
+import function EndeCutscene();
 
 // --- owntimer ---
 import function SetOwnTimer(int timerid, int timeout);
@@ -10,24 +13,6 @@ import function IsOwnTimerExpired(int timerid);
 // --- Speech ---
 import function DisplaySpeechBackgroundEx(this Character*, String message);
 import function repeatedly_execute_always();
-
-//veraltet (defines)
-#define A_WALK_TO  0
-#define A_LOOK_AT  1
-#define A_TALK_TO  2
-#define A_GIVE_TO  3
-#define A_PICK_UP  4
-#define A_USE      5
-#define A_OPEN     6
-#define A_CLOSE    7
-#define A_PUSH     8
-#define A_PULL     9
-
-#define A_COUNT_     10
-
-#define A_DEFAULT    11
-#define A_SWITCH_TO  12
-#define A_USE_INV    13
 
 // --- action ---
 enum eAction
@@ -162,3 +147,26 @@ enum eLanguage
 
 import bool bTreppe;
 import bool bTreppe1;
+
+import function gib(InventoryItem* inventory,  Character* cha);
+import function PlayChannel(this AudioClip*, int seek);
+
+import function greife(this Character*);
+import function greife2(this Character*, int waittime, AudioClip* audio);
+import function nimm(Object* o,  InventoryItem* i);
+import function stell(Object* o,  InventoryItem* i, AudioClip* a );
+
+import function schrauben();
+
+import function ChangeRoomSequence(int room, String text);
+
+enum eInventorySprite{
+  eIBriefumschlagLeer = 198,
+  eIBriefumschlagSchrift = 215, 
+  eIBriefumschlagMarke = 216, 
+  eIBriefumschlagSchriftMarke = 217, 
+  eIKerze = 195, 
+  eIKerzeSchluessel = 196, 
+  eISitzkissenL = 453, 
+  eISitzkissenR = 454, 
+};
